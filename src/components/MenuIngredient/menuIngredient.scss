@@ -1,0 +1,11 @@
+.MenuIngredient {
+  font-weight: lighter;
+  span {
+    font-weight: normal;
+    color: rgb(124, 120, 120);
+    margin-left: 0.3rem;
+  }
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}

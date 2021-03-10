@@ -1,0 +1,66 @@
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  &__Input {
+    border: none;
+    border-radius: 10px;
+    height: 2.9rem;
+    width: 30%;
+    background-color: #535a6b;
+    padding: 1rem 2rem;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    &::placeholder {
+      font-size: 14px;
+      font-weight: bold;
+      color: #242730;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &__Search {
+    color: rgb(182, 178, 178);
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &:hover {
+      transform: scale(1.1);
+      color: white;
+    }
+  }
+  &Logo {
+    display: flex;
+    align-items: center;
+    &__Text {
+      color: #fff;
+      margin-right: 2.5rem;
+    }
+    &__Image {
+      margin-right: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 1.3rem;
+      width: 1.7rem;
+      justify-content: space-between;
+      .line1,
+      .line2,
+      .line3 {
+        height: 3px;
+        background-color: #fff;
+      }
+      .line1 {
+        width: 1.2rem;
+      }
+      .line2 {
+        width: 1.7rem;
+      }
+      .line3 {
+        width: 0.7rem;
+      }
+    }
+  }
+}
