@@ -23,7 +23,7 @@ function Header({ setSearchState, searchState, setSearchResults }) {
         type: "main course",
       },
       headers: {
-        "x-rapidapi-key": "1629860412msh2bde578219c9716p141de7jsnd5b0fecd85f1",
+        "x-rapidapi-key": `${process.env.REACT_APP_API_KEY}`,
         "x-rapidapi-host":
           "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
       },

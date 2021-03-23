@@ -6,7 +6,9 @@ function Recipe({ currentRecepie }) {
       <div className="Recipe">
         <div className="Recipe__Source">{currentRecepie.sourceName}</div>
         <h3 className="Recipe__Title">{currentRecepie.title}</h3>
-        <img src={currentRecepie.image} alt="" className="Recipe__Image" />
+        <div className="Recipe__Wrapper">
+          <img src={currentRecepie.image} alt="" className="Recipe__Image" />
+        </div>
       </div>
     );
   } else {

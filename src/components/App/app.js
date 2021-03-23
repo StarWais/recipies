@@ -8,6 +8,16 @@ function App() {
   const [searchState, setSearchState] = useState("");
   const [searchResults, setSearchResults] = useState([{ number: 0 }]);
   const [currentRecepie, setCurrentRecepie] = useState({});
+  function showMenuRecipie() {
+    if (
+      currentRecepie?.aggregateLikes >= 0 &&
+      (searchResults.number === 0 || searchResults.number === undefined)
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
   return (
     <div
       className="App"
@@ -23,13 +33,19 @@ function App() {
         searchState={searchState}
         setSearchResults={setSearchResults}
       />
-      <SearchResults
-        searchResults={searchResults}
-        setCurrentRecepie={setCurrentRecepie}
-        setSearchResults={setSearchResults}
-      />
-      <Recipe currentRecepie={currentRecepie} />
-      <Menu currentRecepie={currentRecepie} />
+      {searchResults.number > 0 && (
+        <SearchResults
+          searchResults={searchResults}
+          setCurrentRecepie={setCurrentRecepie}
+          setSearchResults={setSearchResults}
+        />
+      )}
+      {showMenuRecipie() && (
+        <>
+          <Recipe currentRecepie={currentRecepie} />
+          <Menu currentRecepie={currentRecepie} />
+        </>
+      )}
     </div>
   );
 }

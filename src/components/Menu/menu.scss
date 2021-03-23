@@ -1,10 +1,13 @@
 .Menu {
-  width: 30%;
+  width: 25%;
   background: white;
   height: 100vh;
-  position: absolute;
+  position: fixed;
+  box-shadow: 6rem 6rem 6rem 3rem #bfbfbf;
   top: 0;
+  overflow: scroll;
   right: 0;
+  z-index: 0;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   padding: 3rem;
@@ -23,7 +26,7 @@
     height: 4rem;
     justify-content: space-between;
     svg {
-      margin-right: 1.3rem;
+      margin-right: 0.8rem;
       height: 1.3rem !important;
       width: 1.3rem !important;
       color: rgb(112, 111, 111);
@@ -39,7 +42,7 @@
     font-size: 18px;
     span {
       font-weight: bold;
-      margin-left: 1rem;
+      margin-left: 0.4rem;
     }
   }
 }

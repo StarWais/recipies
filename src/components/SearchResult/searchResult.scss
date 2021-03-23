@@ -17,4 +17,8 @@
     justify-content: center;
     flex-direction: column;
   }
+  &:hover {
+    background-color: rgb(85, 190, 190);
+    border-color: rgb(85, 190, 190);
+  }
 }

@@ -6,7 +6,7 @@ function MenuIngredient({ name, amount, unit }) {
     <li className="MenuIngredient">
       {name}{" "}
       <span>
-        {amount} {unit}
+        {amount} {unit === "teaspoon" || unit === "teaspoons" ? "tsp" : unit}
       </span>
     </li>
   );
